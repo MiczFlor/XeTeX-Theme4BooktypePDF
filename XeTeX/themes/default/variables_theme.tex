@@ -1,0 +1,67 @@
+% THEME DEFAULT
+% this document sets variables used to style this theme
+
+% FONT & TYPE FACE
+\newcommand{\varBookFontSize}	{12pt}
+\newcommand{\varFontMain}	{Roboto-Regular.ttf}
+\newcommand{\varFontSans}	{Roboto-Regular.ttf}
+\newcommand{\varFontRoman}	{LinLibertine_R.otf}
+\newcommand{\varFontMono}	{UbuntuMono-R.ttf}
+
+% TYPE FACE 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PAGESTYLE (headers and footers)
+% set header and footer style
+\newcommand{\varPageStyle}	{detailed} 
+% available: plain, detailed
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TABLES OF CONTENTS FIGURES TABLES
+
+% hide table of figures and tables?
+% set globally in variables.tex
+% comment out here if you want global values
+\renewcommand{\varShowToFigures}				{true} % (true|false) 
+\renewcommand{\varShowToTables}				{true} % (true|false) 
+
+% the numbering of figures e.g. 1.1.3 (IF there are any in the document)
+% NOTE: if \varChapterWriteNumbering == false, numbers will be hidden in all toc
+\newcommand{\varShowToFiguresNumbering}	{true} % (true|false) 
+
+% NOTE: if \varChapterWriteNumbering == false, numbers will be hidden in all toc
+% the numbering of tables e.g. 1.1.3 (IF there are any  in the document)
+\newcommand{\varShowToTablesNumbering}		{true} % (true|false)
+
+% set level of table of contents
+\newcommand{\varToContentsDepth}				{2} 
+% 0: chapter (not available for \documentclass{article),
+% 1: section,
+% 2: subsection, etc.
+% 5 shows all
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% MAIN MATTER TABLES OF CONTENTS FIGURES TABLES
+
+% the numbering of parts (IF there are any in the document)
+\newcommand{\varPartWriteNumbering}	{true} % (true|false) 
+% Print `Part' on the page of each new part?
+\newcommand{\varPartWriteLabel}	{true} % (true|false) 
+
+% the numbering of chapters (IF there are any in the document)
+\newcommand{\varChapterWriteNumbering}	{true} % (true|false) 
+% Print `Chapter' above the chapter title in each new chapter?
+\newcommand{\varChapterWriteLabel}	{true} % (true|false) 
+
+% set chapter title style
+\newcommand{\varChapterStyle}	{default} 
+% pick from default, lessismore, gothcross, victorian
+
+% the numbering of sections and subsections (IF there are any in the document)
+% Note: if \varChapterWriteNumbering == false, (sub)sections will have no numbers anyway
+\newcommand{\varWriteNumberingForSections}	{true} % (true|false) 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% FIGURES (images) 
+% http://www.ctan.org/pkg/caption
+\newcommand{\varFigCapLabelSize}{small} % (scriptsize|footnotesize|small|normalsize|large|Large) font size from small to large

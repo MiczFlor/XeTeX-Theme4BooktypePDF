@@ -1,0 +1,49 @@
+% used to design the chapter titles across the entire book
+% relevant variables are set inside variables-theme.tex
+
+% CHAPTER THEME lessismore
+% left aligned number | chapter title
+\ifnum\pdfstrcmp{\varChapterStyle}{lessismore}=0
+	\definecolor{gray75}{gray}{0.75}
+	\newcommand{\hsp}{\hspace{20pt}}
+	\titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{gray75}{|}\hsp}{0pt}{\Huge\bfseries}
+\fi
+
+% CHAPTER THEME gothcross
+% chapter number \\ title centered with 3.5cm flower graphics above and below chapter title
+\ifnum\pdfstrcmp{\varChapterStyle}{gothcross}=0
+	% relative path to EPS file
+	\newcommand{\varChapterIcon}	{Assets/Illustrations/CrossFloral01.eps} 
+	\titleformat{\chapter}[hang]
+	{
+		\color{black}
+		\huge
+		\bfseries
+		\filcenter
+	}
+	{}
+	{0cm} % shift to right
+	% don't break the following up into individual lines - whitespaces will move image
+	% below: hspace moves image left; vspace moves title down; \\ line break
+	{{\hspace*{0.1cm}\includegraphics{\varChapterIcon}\vspace*{0.5cm}}\\~\\~\\}
+\fi
+
+% CHAPTER THEME victorian
+% chapter number \\ title centered with 3.5cm flower graphics above and below chapter title
+\ifnum\pdfstrcmp{\varChapterStyle}{victorian}=0
+	\newcommand{\varChapterIcon}	{Assets/Illustrations/VictorianFloral05.eps} % relative path to EPS file
+	\titleformat{\chapter}[hang]
+	{
+		\color{black}
+		\huge
+		\bfseries
+		\filcenter
+	}
+	{}
+	{0cm} % shift to right
+	% don't break the following up into individual lines - whitespaces will move image
+	% below: hspace moves image left; vspace moves title down; \\ line break
+	{{\hspace*{0.1cm}\includegraphics{\varChapterIcon}\vspace*{0.5cm}}\\}
+	% below: vspace moves image down
+	[{\vspace*{0.7cm}\includegraphics[angle=180,origin=c]{\varChapterIcon}}] 
+\fi

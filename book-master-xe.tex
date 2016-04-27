@@ -1,0 +1,151 @@
+% load the variables / metadata for the book first
+\input{BookConfig/variables.tex}
+
+% load the variables from the theme
+\input{XeTeX/themes/\varBookTheme/variables_theme.tex}
+% load teh preamble for all books
+\input{XeTeX/preamble_general-xe.tex}
+% load the preamble specific for this theme (set in BookConfig/variables.tex)
+\input{XeTeX/themes/\varBookTheme/preamble_theme.tex}
+
+\begin{document}
+
+%-------------------------------------------------------------------------------
+% FRONTMATTER
+\frontmatter
+% turns off chapter numbering and uses roman numerals for page numbers
+%-------------------------------------------------------------------------------
+\pagestyle{empty} % Removes page numbers for frontmatter
+
+% HALF TITLE / SCHMUTZTITEL (de)
+% include if set TRUE in BookConfig
+\title{\textbf{\varTitle}}
+\author{\varAuthors}
+\date{\varPublicationdate} 
+\ifnum\pdfstrcmp{\varShowHalfTitle}{true}=0
+	\cleardoublepage % force to start on odd page
+	\maketitle
+\fi 
+
+% TITLE PAGE / TITELBLATT (de)
+% see also: https://en.wikibooks.org/wiki/LaTeX/Title_Creation
+% read cover page from extra file
+% include according to theme and language set in BookConfig
+\ifnum\pdfstrcmp{\varShowTitlePage}{true}=0 
+	\cleardoublepage % force to start on odd page
+	\input{XeTeX/themes/\varBookTheme/frontmatter_titlepage_\varBookLanguage.tex}
+\fi 
+
+% COLOPHON / KOLOPHON (de)
+% read colophon (impressum/imprint) from extra file
+% include according to theme and language set in BookConfig
+\ifnum\pdfstrcmp{\varShowColophon}{true}=0 
+	\input{XeTeX/themes/\varBookTheme/frontmatter_colophon_\varBookLanguage.tex}
+\fi 
+
+% DEDICATION / WIDMUNG (de)
+\ifnum\pdfstrcmp{\varShowDedication}{true}=0 
+	\cleardoublepage % force to start on odd page
+	\thanks{\varDedication}
+\fi 
+
+%TABLE OF CONTENTS
+% Include dots between chapter name and page number
+\ifnum\pdfstrcmp{\varShowToContents}{true}=0 
+	\cleardoublepage % force to start on odd page
+	\begingroup
+		\renewcommand{\cftchapdotsep}{\cftdotsep}
+		% check if the chapter numbering was switched off in body (variables_theme.tex)
+		% if so, also drop them in the ToC for design and indent consistency
+		\ifnum\pdfstrcmp{\varChapterWriteNumbering}{false}=0
+			\renewcommand\numberline[1]{} 
+		\fi
+		% set level of table of contents
+		\setcounter{tocdepth}{\varToContentsDepth}
+		\tableofcontents
+	\endgroup
+	\clearpage % force following content to next page
+\fi
+
+%TABLE OF FIGURES
+\ifnum\pdfstrcmp{\varShowToFigures}{true}=0 
+	\begingroup
+		\ifnum\pdfstrcmp{\varShowToFiguresNumbering}{false}=0
+			\renewcommand\numberline[1]{}
+		\fi
+		% check if the chapter numbering was switched off in body (variables_theme.tex)
+		% if so, also drop them in the ToC for design and indent consistency
+		\ifnum\pdfstrcmp{\varChapterWriteNumbering}{false}=0
+			\renewcommand\numberline[1]{}
+		\fi
+		\listoffigures
+	\endgroup
+\fi
+
+%TABLE OF TABLES
+\ifnum\pdfstrcmp{\varShowToTables}{true}=0 
+	\begingroup
+		\ifnum\pdfstrcmp{\varShowToTablesNumbering}{false}=0
+			\renewcommand\numberline[1]{}
+		\fi
+		% check if the chapter numbering was switched off in body (variables_theme.tex)
+		% if so, also drop them in the ToC for design and indent consistency
+		\ifnum\pdfstrcmp{\varChapterWriteNumbering}{false}=0
+			\renewcommand\numberline[1]{}
+		\fi
+		\listoftables
+	\endgroup
+\fi
+
+% INTRODUCTION (one or more chapters)
+% all BACKMATTER content:
+\input{_content/AAfrontmatter.tex}
+
+%-------------------------------------------------------------------------------
+% MAINMATTER
+% turns on chapter numbering, resets page numbering and uses arabic numerals for page numbers; 
+\mainmatter
+	\ifnum\pdfstrcmp{\varPartWriteNumbering}{false}=0
+		\renewcommand{\thepart}{} % hides numbers from Part in body
+	\fi
+	\ifnum\pdfstrcmp{\varPartWriteLabel}{false}=0
+		\renewcommand{\partname}{} % removes PART from the page where the part starts
+	\fi
+	\ifnum\pdfstrcmp{\varChapterWriteNumbering}{false}=0
+		\renewcommand{\thechapter}{} % hides numbers from chapter in body
+		\renewcommand{\thesection}{} % hides numbers from sections inside chapters
+		\renewcommand{\thesubsection}{} % hides numbers from subsections inside chapters
+	\fi
+	\ifnum\pdfstrcmp{\varWriteNumberingForSections}{false}=0
+		\renewcommand{\thesection}{} % hides numbers from sections inside chapters
+		\renewcommand{\thesubsection}{} % hides numbers from subsections inside chapters
+	\fi
+	\ifnum\pdfstrcmp{\varChapterWriteLabel}{false}=0
+		\renewcommand{\chaptername}{} % removes CHAPTER from top of chapter
+	\fi
+%-------------------------------------------------------------------------------
+% STRUCTURING OF CONTENT
+%\part{D R A C U L A} == section in Booktype, this is a stand alone page on the right (odd number)
+%\chapter{Jonathan Harker's Journal} == chapter in Booktype, page starts on the right (odd number)
+%\section{Section title}
+%\subsection{''subsection''}
+%\subsubsection{''subsubsection''}
+%\paragraph{''paragraph''}
+%\subparagraph{''subparagraph''}
+
+% all possible pagestyles (header and footer) are included in the following file
+% https://en.wikibooks.org/wiki/LaTeX/Page_Layout#Page_styles
+\input{XeTeX/pagestyle_snippet-xe.tex}
+
+% all MAINMATTER content:
+\input{_content/AAmainmatter.tex}
+
+%-------------------------------------------------------------------------------
+% BACKMATTER
+\backmatter
+% turns off chapter numbering and doesn't fiddle with page numbering
+%-------------------------------------------------------------------------------
+% all BACKMATTER content:
+\input{_content/AAbackmatter.tex}
+
+\end{document}

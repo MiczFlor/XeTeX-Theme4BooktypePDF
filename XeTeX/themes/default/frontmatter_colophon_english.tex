@@ -1,0 +1,110 @@
+\begin{footnotesize}
+
+\parindent 0pt
+% for if commands see http://tex.stackexchange.com/questions/22923/are-there-any-if-commands-like-ifnum-in-latex
+
+\begin{center}
+% book and author information
+\ifnum\pdfstrcmp{\varTitle}{}=0 \else \textit{\varTitle}\ \fi 
+% \ followed by whitespace forces whitespace
+\ifnum\pdfstrcmp{\varAuthors}{}=0 \else was written by \varAuthors \fi
+
+\ifnum\pdfstrcmp{\varURLAuthor}{}=0 ~\\ % forced line break `~\\`
+\else 
+More about \varAuthors \ at \varURLAuthor\ \\~\\ % forced double line break `~\\~\\'
+\fi 
+
+% publisher information
+\ifnum\pdfstrcmp{\varPublisher}{}=0 \else Published by \varPublisher \fi  
+
+\ifnum\pdfstrcmp{\varURLPublisher}{}=0 \else  \varURLPublisher \fi
+
+\ifnum\pdfstrcmp{\varPublishercity}{}=0 \else \ \varPublishercity \fi
+\ifnum\pdfstrcmp{\varPublicationdate}{}=0 \else ,  \varPublicationdate \fi
+
+\ifnum\pdfstrcmp{\varEdition}{}=0 ~\\ % forced line break `~\\`
+\else 
+Edition: \varEdition\ \\~\\ % forced double line break `\\~\\'
+\fi 
+
+% copyright information
+Copyright \textcopyright{} % (c) symbol
+% for if commands see http://tex.stackexchange.com/questions/22923/are-there-any-if-commands-like-ifnum-in-latex
+\ifnum\pdfstrcmp{\varCopyrightdate}{}=0 \else \varCopyrightdate\ \fi 
+% \ followed by whitespace forces whitespace
+\ifnum\pdfstrcmp{\varCopyrightholder}{}=0 \else \varCopyrightholder 
+.\\~\\ \fi
+
+% cover information
+\ifnum\pdfstrcmp{\varCoverdesign}{}=0 \else Cover designed by \varCoverdesign .\ \fi 
+\ifnum\pdfstrcmp{\varCoverimage}{}=0 \else Cover image: \varCoverimage .\ \fi
+
+\ifnum\pdfstrcmp{\varPhotographyby}{}=0 \else Photography by: \varPhotographyby .\ \fi
+
+\ifnum\pdfstrcmp{\varIllustrationby}{}=0 \else Illustrations: \varIllustrationby .\fi
+
+\ifnum\pdfstrcmp{\varTypeface}{}=0 \else Typeface: \varTypeface \fi
+
+\vfill 
+
+\end{center}
+
+% table in the middle of the page
+\begin{center}
+\begin{tabular}{ll}
+\ifnum\pdfstrcmp{\varEbookISBN}{}=0 \else ISBN \varEbookISBN \ & ebook \\ \fi
+\ifnum\pdfstrcmp{\varPrintISBN}{}=0 \else ISBN \varPrintISBN \ & printed book \\ \fi
+\end{tabular}
+\end{center}
+
+
+\ifnum\pdfstrcmp{\varAcknowledge}{}=0 \else 
+	\vfill 
+	\varAcknowledge 
+\fi
+
+\vfill 
+
+% misc information
+\begin{center}
+\ifnum\pdfstrcmp{\varEditedby}{}=0 \else Edited by \varEditedby .\ \fi 
+
+\ifnum\pdfstrcmp{\varTextby}{}=0 \else Texts by \varTextby .\ \fi 
+
+\ifnum\pdfstrcmp{\varTranslationby}{}=0 \else Translation by \varTranslationby .\ \fi 
+
+\ifnum\pdfstrcmp{\varIntroductionby}{}=0 \else Introduction: \varIntroductionby .\ \fi 
+
+\ifnum\pdfstrcmp{\varResearch}{}=0 \else Research: \varResearch .\ \fi 
+
+\ifnum\pdfstrcmp{\varLectorate}{}=0 \else Lectorate: \varLectorate .\ \fi 
+
+\ifnum\pdfstrcmp{\varProofreading}{}=0 \else Proofreading: \varProofreading .\ \fi 
+
+\ifnum\pdfstrcmp{\varRightsclearing}{}=0 \else Clearing rights: \varRightsclearing .\ \fi 
+\end{center}
+
+\vfill 
+
+% publisher information
+\ifnum\pdfstrcmp{\varPrintercompany}{}=0 \else Printed by \varPrintercompany \fi  
+\ifnum\pdfstrcmp{\varPrintercountry}{}=0 \else \ in \varPrintercountry \fi
+\ifnum\pdfstrcmp{\varPrintedon}{}=0 .\ \else \ on  \varPrintedon .\ \fi
+\ifnum\pdfstrcmp{\varPapercertification}{}=0 \else \varPapercertification \fi
+
+\ifnum\pdfstrcmp{\varBookbinder}{}=0 \else This book was bound by \varBookbinder .\fi  
+
+
+\ifnum\pdfstrcmp{\varBibliographicinformation}{}=0 \else 
+	\vfill 
+	\varBibliographicinformation 
+\fi
+
+
+\ifnum\pdfstrcmp{\varBibliographicinformation}{}=0 \else 
+	\vfill 
+	\varCreationTool
+\fi
+
+\end{footnotesize}
+\clearpage

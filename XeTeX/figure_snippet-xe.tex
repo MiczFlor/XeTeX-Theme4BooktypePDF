@@ -1,0 +1,71 @@
+% calc image measurements
+% this is for later to calculate print sizes...
+%\settoheight\imageheight{\includegraphics{\varImgPath}}
+%\settowidth\imagewidth{\includegraphics{\varImgPath}}
+%Image Original Height: \the\imageheight\ (\printlength{\imageheight}) Original Width: \the\imagewidth\ (\printlength{\imagewidth})
+
+% caption settings
+\captionsetup[figure]{	
+	font=\varFigCapLabelSize,
+}
+% hide numbers if set that way in theme variables
+\ifnum\pdfstrcmp{\varShowToFiguresNumbering}{false}=0
+\captionsetup[figure]{
+		labelformat=empty,
+}
+\fi
+% hide numbers if chapter numbers are hidden set that way in theme variables
+\ifnum\pdfstrcmp{\varChapterWriteNumbering}{false}=0
+\captionsetup[figure]{
+		labelformat=empty,
+}
+\fi
+
+% to see \linewidth
+% \hrule
+
+%\begin{figure}
+%\includegraphics[max width=\linewidth]{example-image-1x1}
+%\end{figure}
+%\begin{figure}
+%\includegraphics[max width=\linewidth]{example-image-a4}
+%\end{figure}
+
+
+\ifnum\pdfstrcmp{\varWrapText}{true}=0 
+	% wrap text around figure
+	\begin{wrapfigure}{\varFigFloat}{\varFigWidth\textwidth}
+		\vspace{-12pt} % move image up a bit to align correctly to top
+		\includegraphics[width=\varFigWidth\textwidth]{\varImgPath} 
+		% if caption empty, don't print it (no empty line)
+		\ifnum\pdfstrcmp{\varCaption	}{}=0 \else \caption{\varCaption} \fi 
+	\end{wrapfigure}
+\else
+	% do not wrap text around figure
+	\begin{figure}[\varFigPlacement]
+	\centering
+	\ifnum\pdfstrcmp{\varFigWidth}{paper}=0 
+		% image is paperwidth
+		% max height a little less than text height to incluce caption
+		\includegraphics[width=\paperwidth, max height=0.95\textheight]{\varImgPath}
+	\else
+		\ifnum\pdfstrcmp{\varFigWidth}{text}=0 
+			% image is text width
+			% max height a little less than text height to incluce caption
+			\includegraphics[width=\textwidth, max height=0.95\textheight]{\varImgPath}			
+		\else
+			\ifnum\pdfstrcmp{\varFigWidth}{scale}=0 
+				% image is as big as possible, max width = text width
+				% max height a little less than text height to incluce caption
+				\includegraphics[max width=\textwidth, max height=0.95\textheight]{\varImgPath}			
+			\else
+				% image is scaled according to parameter given in \varFigWidth
+				% max height a little less than text height to incluce caption
+				\includegraphics[max width=\varFigWidth\textwidth, max height=0.95\textheight]{\varImgPath}
+			\fi 
+		\fi 
+	\fi 
+	% if caption empty, don't print it (no empty line)
+	\ifnum\pdfstrcmp{\varCaption}{}=0 \else \caption{\varCaption} \fi 
+	\end{figure}
+\fi 

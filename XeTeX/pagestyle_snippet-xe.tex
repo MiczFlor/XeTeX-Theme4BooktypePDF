@@ -1,0 +1,16 @@
+% contains all header and footer styles
+% http://linorg.usp.br/CTAN/macros/latex/contrib/fancyhdr/fancyhdr.pdf
+
+% only footer with page number centered
+\ifnum\pdfstrcmp{\varPageStyle}{plain}=0 
+	\pagestyle{plain} 
+\fi
+
+% header page left: chapter, right: section; footer: centered page number
+\ifnum\pdfstrcmp{\varPageStyle}{detailed}=0 
+	\pagestyle{fancy}
+	\fancyhf{}
+	\fancyhead[LE]{\nouppercase{\leftmark}}
+	\fancyhead[RO]{\nouppercase{\rightmark}}
+	\fancyfoot[CE,CO]{\thepage}
+\fi

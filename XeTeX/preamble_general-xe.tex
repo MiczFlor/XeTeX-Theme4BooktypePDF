@@ -1,0 +1,144 @@
+\documentclass[\varBookFontSize]{book}
+
+% for sample text
+\usepackage{lipsum}       
+\usepackage{blindtext}
+
+% flexible and easy interface to page dimensions.
+% ftp://ftp.tu-chemnitz.de/pub/tex/macros/latex/contrib/geometry/geometry.pdf
+\usepackage[
+	twoside,
+	paperwidth    = \varPaperWidth, 
+	paperheight   = \varPaperHeight,
+	bindingoffset	= \varBindingOffset,
+	top 				= \varMarginTop,
+	bottom			= \varMarginBottom, 
+	left				= \varMarginLeft, 
+	right				= \varMarginRight,
+]{geometry}
+
+% here are packages needed to work with XeTeX
+\usepackage{xltxtra} % Extra customizations for XeLaTeX;
+% xltxtra automatically loads fontspec and xunicode, both of which you need
+% font selection commands using fontspec;
+% change the names of the fonts to the ones you want to use!
+\defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+% to support TeX conventions like ‘‘---
+%\setmainfont{Linux Libertine O}
+%\setsansfont{Ubuntu}
+%\setmonofont{Courier}
+% using the old style numbers for the entire document
+
+% setting custom font with path
+\setmainfont [ Path = Fonts/] {\varFontMain}
+\setsansfont [ Path = Fonts/] {\varFontSans}
+%\setromanfont[Mapping=tex-text, Numbers=OldStyle]{\varFontRoman}
+\setmonofont [ Path = Fonts/] {\varFontSans}
+
+% line spacing
+% http://www.ctan.org/tex-archive/macros/latex/contrib/setspace/
+\usepackage{setspace}
+
+%  alternative commands for left justified text, right-justified text and centred text that support hyphenation
+\usepackage{ragged2e}
+
+% for the adjustwidth environment
+\usepackage{changepage}   
+
+% use colors
+\usepackage{color}
+
+% do maths for image sizes (depending on resolution)
+% http://ctan.org/pkg/calc
+\usepackage{calc}
+
+% ty­po­graph­i­cal (and other) rules, and hy­phen­ation pat­terns for a wide range of lan­guages
+% http://mirror.unicorncloud.org/CTAN/macros/latex/required/babel/base/babel.pdf
+% https://en.wikibooks.org/wiki/LaTeX/Internationalization
+\usepackage[\varBookLanguage]{babel}
+
+% changes to the standard chapter style
+% http://www.ctan.org/tex-archive/macros/latex/contrib/titlesec/
+%\usepackage{titlesec}
+\usepackage{titlesec}
+% all possible titles are included in the following file
+\input{XeTeX/titleformat_snippet-xe.tex}
+
+% custom headers and footers
+% http://linorg.usp.br/CTAN/macros/latex/contrib/fancyhdr/fancyhdr.pdf
+% https://de.sharelatex.com/learn/Headers_and_footers
+\usepackage{fancyhdr}
+
+% suppress orphans and widows
+% ftp://ftp.tu-chemnitz.de/pub/tex/macros/latex/contrib/nowidow/nowidow.pdf
+\usepackage[all]{nowidow}
+
+% just for the example images - not needed in production
+% http://www.ctan.org/tex-archive/macros/latex/contrib/mwe
+\usepackage{mwe}
+\usepackage[export]{adjustbox}% 'export' allows adjustbox keys in \includegraphics
+
+% image package that handels max-width and max-height
+% http://www.ctan.org/pkg/easyfig
+\usepackage{easyfig}
+
+% wrap text around images
+% http://mirror.unicorncloud.org/CTAN/macros/latex/contrib/wrapfig/wrapfig-doc.pdf
+\usepackage{wrapfig}
+
+% manage captions
+% http://www.ctan.org/pkg/caption
+\usepackage{caption}
+
+% styling tables
+% http://ctan.org/pkg/booktabs
+\usepackage{booktabs}
+
+% URLs in the pdf document
+% http://www.ctan.org/tex-archive/macros/latex/contrib/hyperref
+\usepackage[hidelinks]{hyperref}
+
+% Control table of contents, figures, etc
+% http://ctan.org/pkg/tocloft
+% ftp://ftp.tu-chemnitz.de/pub/tex/macros/latex/contrib/tocloft/tocloft.pdf
+\usepackage{tocloft}
+
+% calculate image size
+% http://tex.stackexchange.com/questions/53497/how-do-i-get-the-exact-dimension-of-a-picture-in-latex
+% http://www.ctan.org/pkg/printlen
+%\usepackage{printlen}
+%\uselengthunit{cm}
+%\newlength\imageheight
+%\newlength\imagewidth
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% POSITIONING
+
+% fix table position
+% http://stackoverflow.com/questions/1673942/latex-table-positioning
+% use the H placement option (e.g. \begin{table}[H]) 
+% to make sure it doesn't get repositioned
+\usepackage{float}
+\restylefloat{table}
+
+% IMAGE PLACEMENT
+% Alter some LaTeX defaults for better treatment of figures:
+% http://www-rohan.sdsu.edu/~aty/bibliog/latex/floats.html
+% http://robjhyndman.com/hyndsight/latex-floats/
+    % See p.105 of "TeX Unbound" for suggested values.
+    % See pp. 199-200 of Lamport's "LaTeX" book for details.
+    %   General parameters, for ALL pages:
+    \renewcommand{\topfraction}{0.9}	% max fraction of floats at top
+    \renewcommand{\bottomfraction}{0.8}	% max fraction of floats at bottom
+    %   Parameters for TEXT pages (not float pages):
+    \setcounter{topnumber}{2}
+    \setcounter{bottomnumber}{2}
+    \setcounter{totalnumber}{4}     % 2 may work better
+    \setcounter{dbltopnumber}{2}    % for 2-column pages
+    \renewcommand{\dbltopfraction}{0.9}	% fit big float above 2-col. text
+    \renewcommand{\textfraction}{0.07}	% allow minimal text w. figs
+    %   Parameters for FLOAT pages (not text pages):
+    \renewcommand{\floatpagefraction}{0.7}	% require fuller float pages
+   % N.B.: floatpagefraction MUST be less than topfraction !!
+    \renewcommand{\dblfloatpagefraction}{0.7}	% require fuller float pages
+   % remember to use [htp] or [htpb] for placement

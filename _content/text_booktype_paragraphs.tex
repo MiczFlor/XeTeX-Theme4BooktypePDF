@@ -1,0 +1,257 @@
+\chapter{Heading in Booktype}
+
+NORMAL PARAGRAPH IN BOOKTYPE this chapter is meant to show all stuff that can be done in Booktype in XeTex. Left Munich at 8:35 P. M., on 1st May, arriving at Vienna early next morning; should have arrived at 6:46.
+
+\section{SubHeading in Booktype}
+
+\subsection{SubSubHeading in Booktype}
+
+Pre-formatted
+\begin{verbatim}
+This      is      a         table
+using     white   spaces    only!
+\end{verbatim}
+
+QUOTE
+\begin{quote}
+QUOTE \lipsum[1]
+\end{quote}
+\begin{quotation}
+QUOTATION arrived at 6:46, but train was an hour late. Buda-Pesth seems a wonderful place, from the glimpse which I got of it from the train and the 
+
+little I could walk through the streets. I feared to go very far from the station, as 
+
+we had arrived late and would start as near the correct time as possible. The impression I had was that we were leaving the West and ent.
+\end{quotation}
+\begin{verse}
+VERSE arrived at 6:46, but train was an hour late. Buda-Pesth seems a wonderful place, from the glimpse which I got of it from the train and 
+
+the little I could walk through the streets. 
+
+I feared to go very far from the station, as we had arrived late and would start as near the correct time as possible. 
+
+The impression I had was that we were leaving the West and ent
+\end{verse}
+
+\subsubsection{Font formatting}
+Text you want \underline{underlined goes here.} \blindtext
+
+
+I want to \emph{emphasize} a word.
+\emph{In this emphasized sentence, there is an emphasized \emph{word} which looks upright.}
+
+\textbf{Bold text} may be used to heavily emphasize very important words or phrases.
+\textit{Italicised text} may be used to lightly emphasize words or phrases.
+
+You can also combing \textit{italicised and \textbf{bold text}} as shown here.
+Or the other way around, combine \textbf{bold and \textit{italicised text}} as shown here.
+
+There is \textbf{bold text and} \textmd{medium weight text} - a subtle distinction.
+
+Monospace font like Courier is called \texttt{teletype font}.
+
+\textsf{Sans serif font family} is being used at the beginning of this sentence.
+
+A neat little feature is the \textsc{Small Caps Feature applied here} or the
+{\scshape Small Caps Feature applied here}. 
+
+Old style numbers look like this: {\addfontfeature{Numbers=OldStyle}1234567890}. If old style is set in the preamble then these should also be old style: 1234567890.
+
+Of course you can also \uppercase{shout it all in uppercase}.
+
+\tiny{tiny sample text}
+\scriptsize{scriptsize sample text}
+\footnotesize{footnotesize sample text}
+\small{small sample text}
+\normalsize{normalsize sample text}
+\large{large sample text}
+\Large{Large sample text}
+\LARGE{LARGE sample text}
+\huge{huge sample text}
+\Huge{Huge sample text}
+
+\normalsize
+
+\subsubsection{Links, URLs}
+Here's a link to \href{http://twitter.com/home}{Twitter}. 
+And here is a link to \url{http://booktype.pro}
+
+\subsubsection{Left align}
+\begin{flushleft}
+\lipsum[1]
+\end{flushleft}
+
+\subsubsection{Right align}
+\begin{flushright}
+\lipsum[1]
+\end{flushright}
+
+\subsubsection{Center align}
+\begin{center}
+\lipsum[1]
+\end{center}
+
+\subsubsection{Justify / Blocksatz}
+Back to normal, which is justified text. 
+\lipsum[1]
+
+\subsubsection{indent a paragraph}
+
+\lipsum[1]
+
+\begin{adjustwidth}{2cm}{}
+\lipsum[1]
+\end{adjustwidth}
+
+\begin{adjustwidth}{4cm}{}
+\lipsum[1]
+\end{adjustwidth}
+
+\begin{adjustwidth}{2cm}{}
+\lipsum[1]
+\end{adjustwidth}
+
+\lipsum[1]
+
+\subsubsection{Lists}
+
+\begin{itemize}  
+\item The first item 
+\item The second item 
+\item The third etc \ldots 
+\end{itemize}
+
+\begin{enumerate}  
+\item The first item 
+\item The second item 
+\item The third etc \ldots 
+\end{enumerate}
+
+\begin{itemize}
+\item \blindtext
+\item \blindtext
+\end{itemize}
+
+\begin{enumerate}
+\item \blindtext
+\item \blindtext
+\end{enumerate}
+
+\subsubsection{Font sizes}
+\font\FontSizeTenPT="Ubuntu" at 10pt
+\font\testhuge="Ubuntu" at 100pt
+\font\testbig="Ubuntu" at 80pt
+\font\testnormal="Ubuntu" at 50pt
+\font\testsmall="Ubuntu" at 40pt
+\font\testtiny="Ubuntu" at 24pt
+
+\offinterlineskip\testnormal
+
+{\FontSizeTenPT 10pt is the size of this}
+{\testhuge ABCDE}
+\vskip1pt
+{\testbig ABCDE}
+\vskip1pt
+ABCDE
+\vskip1pt
+{\testsmall ABCDE}
+\vskip1pt
+{\testtiny ABCDE}
+
+\normalsize 
+\chapter{Chapter title and text examples}
+Paragraph style "Normal Text" Lorem ipsum dolor sit amet,
+consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero
+eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+erat, sed diam voluptua. At vero eos et accusam et justo duo
+dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+sanctus est Lorem ipsum dolor sit amet.
+
+\begin{quote}
+Paragraph style "Quote" Lorem ipsum dolor sit
+amet, consetetur sadipscing elitr, sed diam nonumy (press
+Shift+Return for single line breaks)\\
+eirmod tempor invidunt
+\end{quote}
+
+Now we will do some font size. Booktype gives me the
+option to select one of the following font sizes:
+
+\font\FontSizeTenPT="Ubuntu" at 10pt
+\font\FontSizeTwelvePT="Ubuntu" at 12pt
+\font\FontSizeFourteenPT="Ubuntu" at 14pt
+\font\FontSizeSixteenPT="Ubuntu" at 16pt
+\font\FontSizeEighteenPT="Ubuntu" at 18pt
+\font\FontSizeTwentyPT="Ubuntu" at 20pt
+\font\FontSizeTwentytwoPT="Ubuntu" at 22pt
+\font\FontSizeTwentyfourPT="Ubuntu" at 24pt
+\font\FontSizeTwentysixPT="Ubuntu" at 26pt
+\font\FontSizeTwentyeightPT="Ubuntu" at 28pt
+\font\FontSizeThirtyPT="Ubuntu" at 30pt
+
+{\FontSizeTenPT 10pt is the size of this paragraph.}
+{\FontSizeTwelvePT 12pt is the size of this paragraph.}
+{\FontSizeFourteenPT 14pt is the size of this paragraph.}
+{\FontSizeSixteenPT 16pt is the size of this paragraph.}
+{\FontSizeEighteenPT 18pt is the size of this paragraph.}
+{\FontSizeTwentyPT 20pt is the size of this paragraph.}
+{\FontSizeTwentytwoPT 22pt is the size of this paragraph.}
+{\FontSizeTwentyfourPT 24pt is the size of this paragraph.}
+{\FontSizeTwentysixPT 26pt is the size of this paragraph.}
+{\FontSizeTwentyeightPT 28pt is the size of this paragraph.}
+{\FontSizeThirtyPT 30pt is the size of this paragraph.}
+
+\chapter{Style "Heading" and colours}
+
+Paragraph style "Normal Text" with a couple of font
+styles. Here is 
+\textbf{some bold text}. And here is 
+\textit{some italicised text}. 
+Part of this sentence is underlined. 
+We can also combine these, starting 
+\textit{italicise now, \textbf{then some bold}, back to italics only} and back to normal. This can
+also happen the other way around: 
+\textbf{starting bold now, \textit{then some italics}, back to bold only} and
+back to normal.
+
+% http://www.andy-roberts.net/writing/latex/tables
+\noindent
+\begin{table}
+	% hide table numbering if set for list of tables or chapters in general
+	% set in theme variables
+	\ifnum\pdfstrcmp{\varShowToTablesNumbering}{false}=0 
+		\caption*{Just a few names in this table}
+	\else
+		\ifnum\pdfstrcmp{\varChapterWriteNumbering}{false}=0 
+			\caption*{Just a few names in this table}
+		\else
+			\caption{Just a few names in this table} 
+		\fi
+	\fi
+	\begin{center}
+		\begin{tabular}{lllll}
+			\toprule
+			Feature & Icon & Description & HTML & LaTeX \\
+			\midrule
+			Bold & Fat B & Makes the font look fatter & <b> or <strong> & textbf \\
+			Bold & Fat B & Makes the font look fatter & <b> or <strong> & textbf \\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+\end{table}
+
+Here is a coloured piece of text: 
+\textcolor[rgb]{1,0,0}{This is \textbf{red}.}
+\textcolor[rgb]{0,0,1}{And this is \textbf{blue}.}
+\textcolor[rgb]{0,1,0}{This is \textit{green}.}
+\textcolor[rgb]{0.5,0.5,0.5}{\textbf{And pale are you}.}
+
+\section{Style "Subheading", tables and links}
+At vero eos et accusam et justo duo dolores et ea rebum. Stet
+clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
+sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr.
+And let's now insert a table:

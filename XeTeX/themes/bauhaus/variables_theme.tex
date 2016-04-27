@@ -1,0 +1,80 @@
+% THEME BAUHAUS
+% this document sets variables used to style this theme
+
+% FONT & TYPE FACE
+\newcommand{\varBookFontSize}		{10pt}
+% TYPE FACE 
+% for default font packages see:
+% https://www.sharelatex.com/learn/Font_typefaces
+\newcommand{\themeTypeFace}			{qag} 
+% SERIF %%%%%%
+% Latin Modern Roman 	 	lmr
+% Latin Modern Dunhill 	 	lmdh
+% Gyre Bonum qbk 
+% Utopia / Fourier 	utopia 	put
+% Bookman 	 	pbk
+% Charter 	 	bch
+% SANS SERIF %%%%%%
+% Latin Modern Sans Serif 	 	lmss
+% Gyre Adventor 	 	qag
+% Gyre Heros 	 	qhv
+% Helvetica 	 	phv
+% MONO %%%%%%
+% Gyre Cursor 	 	qcr
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PAGESTYLE (headers and footers)
+% set header and footer style
+\newcommand{\varPageStyle}	{detailed} 
+% available: plain, detailed
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TABLES OF CONTENTS FIGURES TABLES
+
+% hide table of figures and tables?
+% set globally in variables.tex
+% comment out here if you want global values
+\renewcommand{\varShowToFigures}				{true} % (true|false) 
+\renewcommand{\varShowToTables}				{true} % (true|false) 
+
+% the numbering of figures e.g. 1.1.3 (IF there are any in the document)
+% NOTE: if \varChapterWriteNumbering == false, numbers will be hidden in all toc
+\newcommand{\varShowToFiguresNumbering}	{true} % (true|false) 
+
+% NOTE: if \varChapterWriteNumbering == false, numbers will be hidden in all toc
+% the numbering of tables e.g. 1.1.3 (IF there are any  in the document)
+\newcommand{\varShowToTablesNumbering}		{true} % (true|false)
+
+% set level of table of contents
+\newcommand{\varToContentsDepth}				{2} 
+% 0: chapter (not available for \documentclass{article),
+% 1: section,
+% 2: subsection, etc.
+% The default depth is 3, subsubsection.
+% 5 shows all
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% MAIN MATTER TABLES OF CONTENTS FIGURES TABLES
+
+% the numbering of parts (IF there are any in the document)
+\newcommand{\varPartWriteNumbering}	{true} % (true|false) 
+% Print `Part' on the page of each new part?
+\newcommand{\varPartWriteLabel}	{true} % (true|false) 
+
+% the numbering of chapters (IF there are any in the document)
+\newcommand{\varChapterWriteNumbering}	{true} % (true|false) 
+% Print `Chapter' above the chapter title in each new chapter?
+\newcommand{\varChapterWriteLabel}	{true} % (true|false) 
+
+% set chapter title style
+\newcommand{\varChapterStyle}	{lessismore} 
+% pick from lessismore, gothcross, victorian
+
+% the numbering of sections and subsections (IF there are any in the document)
+% Note: if \varChapterWriteNumbering == false, (sub)sections will have no numbers anyway
+\newcommand{\varWriteNumberingForSections}	{true} % (true|false) 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% FIGURES (images) 
+% http://www.ctan.org/pkg/caption
+\newcommand{\varFigCapLabelSize}{small} % (scriptsize|footnotesize|small|normalsize|large|Large) font size from small to large

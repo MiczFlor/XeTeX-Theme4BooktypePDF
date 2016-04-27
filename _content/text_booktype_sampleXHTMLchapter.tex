@@ -1,0 +1,223 @@
+\chapter{Chapter title and text examples}
+Paragraph style "Normal Text" Lorem ipsum dolor sit amet,
+consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero
+eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+erat, sed diam voluptua. At vero eos et accusam et justo duo
+dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+sanctus est Lorem ipsum dolor sit amet.
+
+\begin{quote}
+Paragraph style "Quote" Lorem ipsum dolor sit
+amet, consetetur sadipscing elitr, sed diam nonumy (press
+Shift+Return for single line breaks)\\
+eirmod tempor invidunt
+\end{quote}
+
+Now we will do some font size. Booktype gives me the
+option to select one of the following font sizes:
+
+\font\FontSizeTenPT="Ubuntu" at 10pt
+\font\FontSizeTwelvePT="Ubuntu" at 12pt
+\font\FontSizeFourteenPT="Ubuntu" at 14pt
+\font\FontSizeSixteenPT="Ubuntu" at 16pt
+\font\FontSizeEighteenPT="Ubuntu" at 18pt
+\font\FontSizeTwentyPT="Ubuntu" at 20pt
+\font\FontSizeTwentytwoPT="Ubuntu" at 22pt
+\font\FontSizeTwentyfourPT="Ubuntu" at 24pt
+\font\FontSizeTwentysixPT="Ubuntu" at 26pt
+\font\FontSizeTwentyeightPT="Ubuntu" at 28pt
+\font\FontSizeThirtyPT="Ubuntu" at 30pt
+
+{\FontSizeTenPT 10pt is the size of this paragraph.}
+
+{\FontSizeTwelvePT 12pt is the size of this paragraph.}
+
+{\FontSizeFourteenPT 14pt is the size of this paragraph.}
+
+{\FontSizeSixteenPT 16pt is the size of this paragraph.}
+
+{\FontSizeEighteenPT 18pt is the size of this paragraph.}
+
+{\FontSizeTwentyPT 20pt is the size of this paragraph.}
+
+{\FontSizeTwentytwoPT 22pt is the size of this paragraph.}
+
+{\FontSizeTwentyfourPT 24pt is the size of this paragraph.}
+
+{\FontSizeTwentysixPT 26pt is the size of this paragraph.}
+
+{\FontSizeTwentyeightPT 28pt is the size of this paragraph.}
+
+{\FontSizeThirtyPT 30pt is the size of this paragraph.}
+
+\chapter{Style "Heading" and colours}
+
+Paragraph style "Normal Text" with a couple of font
+styles. Here is 
+\textbf{some bold text}. And here is 
+\textit{some italicised text}. 
+Part of this sentence is underlined. 
+We can also combine these, starting 
+\textit{italicise now, \textbf{then some bold}, back to italics only} and back to normal. This can
+also happen the other way around: 
+\textbf{starting bold now, \textit{then some italics}, back to bold only} and
+back to normal.
+
+Here is a coloured piece of text: 
+\textcolor[rgb]{1,0,0}{This is \textbf{red}.}
+\textcolor[rgb]{0,0,1}{And this is \textbf{blue}.}
+\textcolor[rgb]{0,1,0}{This is \textit{green}.}
+\textcolor[rgb]{0.5,0.5,0.5}{\textbf{And pale are you}.}
+
+\section{Style "Subheading", tables and links}
+At vero eos et accusam et justo duo dolores et ea rebum. Stet
+clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
+sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr.
+And let's now insert a table:
+
+% http://www.andy-roberts.net/writing/latex/tables
+\noindent
+\begin{table}[H]
+	% hide table numbering if set for list of tables or chapters in general
+	% set in theme variables
+	\ifnum\pdfstrcmp{\varShowToTablesNumbering}{false}=0 
+		\caption*{Just a few names in this table}
+	\else
+		\ifnum\pdfstrcmp{\varChapterWriteNumbering}{false}=0 
+			\caption*{Just a few names in this table}
+		\else
+			\caption{Just a few names in this table} 
+		\fi
+	\fi
+	\begin{center}
+		\begin{tabular}{lllll}
+			\toprule
+			Feature & Icon & Description & HTML & LaTeX \\
+			\midrule
+			Bold & Fat B & Makes the font look fatter & <b> or <strong> & textbf \\
+			Italicise & Italics I & Font leans to the right & <i> or <emph> & textit \\
+			Underline & U with a line beneath & Draws a line under the text & text-decoration: underline & underline \\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+\end{table}
+		
+Let's not forget about links. Here is a link to
+Here's a link to \href{https://booktype.pro/}{booktype.pro}. 
+Booktype allows authors to create beautiful books for print and digital
+distribution. Find out 
+\href{https://booktype.pro/en/booktype/screenshots/}{more on our
+features page}.
+
+\subsection{Style "SubSubheading", lists, align and endnotes}
+\footnote{This is an endnote at the beginning
+of a paragraph, something that would never actually happen. But
+might.}Sed diam
+nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+erat, sed diam voluptua. At vero eos et accusam et justo duo
+dolores et ea rebum\footnote{This is an endnote in the middle of
+a paragraph.}. Stet clita kasd gubergren, no sea takimata
+sanctus est Lorem ipsum dolor sit amet.\footnote{This is an endnote at the end of the
+paragraph.}
+
+A list of ordered things:
+
+\begin{enumerate}  
+\item the first item on the list 
+\item the second item on the list 
+\item the third item on the list\\a forced line break within the list
+\item and the last item on the list
+\end{enumerate}
+
+And here is an unorderly list
+
+\begin{itemize}
+\item A bullet point item could be anywhere in the list
+\item The same goes for this item with a\\forced line break inside
+\item And the last item is not telling us anything useful either
+\end{itemize}
+
+\begin{flushleft}
+Left aligned text. Lorem ipsum dolor sit amet, consetetur
+sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+et dolore magna aliquamet.
+\end{flushleft}
+
+\begin{flushright}
+Right aligned
+text. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+aliquyam erat, sed diam voluptua. At vero eos et etetur sadipscing
+elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
+justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+takimata sanctus est Lorem ipsum dolor sit amet.
+\end{flushright}
+
+\begin{center}Center aligned
+text. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+aliquyam erat, sed diam voluptua. At vero eos et accusam e elitr,
+sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
+duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+sanctus est Lorem ipsum dolor sit amet.
+\end{center}
+
+Justify /
+Blocksatz text. Lorem ipsum dolor sit amet, consetetur
+sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+accu amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
+duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+sanctus est Lorem ipsum dolor sit amet.
+
+\subsection{Indentation, image and preformatted text}
+
+\begin{adjustwidth}{2cm}{}Did I mention
+that there can be indents? This paragraph is indented once.
+\end{adjustwidth}
+
+\begin{adjustwidth}{4cm}{}This paragraph
+is indented twice.
+\end{adjustwidth}
+
+
+\texttt{Style "preformatted" Sed diam nonumy eirmod tempor invidunt ut \\Shift+Enter (single line break) labore et dolore magna\\  Enter (double line break)}
+\texttt{Shift+Enter (single line break) aliquyam erat, }
+\texttt{   Shift+Enter (single line break) sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.}
+
+I am adding an image here:
+
+\renewcommand{\varCaption}{This is an image with the caption: There are three minutes left on the clock.}
+\renewcommand{\varImgPath}{_content/images/3minutes700x400.jpg}
+\input{XeTeX/figure_snippet-xe.tex}
+
+And then the text continues here. And then the text continues
+here. And then the text continues here. And then the text
+continues here. And then the text continues here. And
+then the text continues here. And then the text continues
+here. And then the text continues here. 
+\chapter{Style "Heading" with a lot of text, a lot of text, a lot of
+text, and even more text}
+Paragraph style "Normal Text" Lorem ipsum dolor sit amet,
+consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+ut labore et dolore magna aliquyam erat, sed diam voluptua.
+\section{Style "Subheading" with a lot of text, a lot of text, a
+lot of text, and even more text}
+At vero eos et accusam et justo duo dolores et ea rebum. Stet
+clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
+sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
+elitr,
+\subsection{Style "SubSubheading" with a lot of text, a lot of text, a
+lot of text, and even more text}
+Sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
+duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+sanctus est Lorem ipsum dolor sit amet.
