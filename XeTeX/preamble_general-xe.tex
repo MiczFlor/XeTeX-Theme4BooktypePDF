@@ -22,18 +22,8 @@
 % xltxtra automatically loads fontspec and xunicode, both of which you need
 % font selection commands using fontspec;
 % change the names of the fonts to the ones you want to use!
-\defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
-% to support TeX conventions like ‘‘---
-%\setmainfont{Linux Libertine O}
-%\setsansfont{Ubuntu}
-%\setmonofont{Courier}
-% using the old style numbers for the entire document
-
-% setting custom font with path
-\setmainfont [ Path = Fonts/] {\varFontMain}
-\setsansfont [ Path = Fonts/] {\varFontSans}
-%\setromanfont[Mapping=tex-text, Numbers=OldStyle]{\varFontRoman}
-\setmonofont [ Path = Fonts/] {\varFontSans}
+%\defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+% fonts are set in the preamble of the theme
 
 % line spacing
 % http://www.ctan.org/tex-archive/macros/latex/contrib/setspace/
@@ -53,9 +43,8 @@
 \usepackage{calc}
 
 % ty­po­graph­i­cal (and other) rules, and hy­phen­ation pat­terns for a wide range of lan­guages
-% http://mirror.unicorncloud.org/CTAN/macros/latex/required/babel/base/babel.pdf
-% https://en.wikibooks.org/wiki/LaTeX/Internationalization
-\usepackage[\varBookLanguage]{babel}
+\usepackage{polyglossia}
+\setdefaultlanguage{german}
 
 % changes to the standard chapter style
 % http://www.ctan.org/tex-archive/macros/latex/contrib/titlesec/

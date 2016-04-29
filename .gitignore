@@ -9,8 +9,10 @@
 *.pdf
 *.out
 *.toc
+bodde*
 Test-Files/*
 Booktype-Examples/*
+bodde/*
 
 # Compiled source #
 ###################
