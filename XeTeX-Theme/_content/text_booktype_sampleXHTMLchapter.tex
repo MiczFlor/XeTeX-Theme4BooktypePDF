@@ -1,14 +1,5 @@
 \chapter{Chapter title and text examples}
-Paragraph style "Normal Text" Lorem ipsum dolor sit amet,
-consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero
-eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
-gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-erat, sed diam voluptua. At vero eos et accusam et justo duo
-dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-sanctus est Lorem ipsum dolor sit amet.
+Paragraph style "Normal Text"\lipsum[2]
 
 \begin{quote}
 Paragraph style "Quote" Lorem ipsum dolor sit
@@ -76,14 +67,16 @@ Here is a coloured piece of text:
 \lipsum[3]
 
 \section{Style "Subheading", tables and links}
-At vero eos et accusam et justo duo dolores et ea rebum. Stet
-clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
-sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr.
+\lipsum[2]
 And let's now insert a table:
 
 % http://www.andy-roberts.net/writing/latex/tables
+% max width == textwidth, see: http://tex.stackexchange.com/questions/121155/how-to-adjust-a-table-to-fit-on-page
 \noindent
 \begin{table}[H]
+	\begin{center}
+   \small
+   \begin{adjustbox}{max width=\textwidth}
 	% hide table numbering if set for list of tables or chapters in general
 	% set in theme variables
 	\ifnum\pdfstrcmp{\varShowToTablesNumbering}{false}=0 
@@ -95,7 +88,6 @@ And let's now insert a table:
 			\caption{Just a few names in this table} 
 		\fi
 	\fi
-	\begin{center}
 		\begin{tabular}{lllll}
 			\toprule
 			Feature & Icon & Description & HTML & LaTeX \\
@@ -105,10 +97,46 @@ And let's now insert a table:
 			Underline & U with a line beneath & Draws a line under the text & text-decoration: underline & underline \\
 			\bottomrule
 		\end{tabular}
+   \end{adjustbox}
 	\end{center}
 \end{table}
-		
-Let's not forget about links. Here is a link to
+
+Some more text, then another, smaller table. \lipsum[3]
+
+% http://www.andy-roberts.net/writing/latex/tables
+% max width == textwidth, see: http://tex.stackexchange.com/questions/121155/how-to-adjust-a-table-to-fit-on-page
+\noindent
+\begin{table}[H]
+	\begin{center}
+   \small
+   \begin{adjustbox}{max width=\textwidth}
+	% hide table numbering if set for list of tables or chapters in general
+	% set in theme variables
+	\ifnum\pdfstrcmp{\varShowToTablesNumbering}{false}=0 
+		\caption*{Even fewer names in this table}
+	\else
+		\ifnum\pdfstrcmp{\varChapterWriteNumbering}{false}=0 
+			\caption*{Even fewer names in this table}
+		\else
+			\caption{Even fewer names in this table} 
+		\fi
+	\fi
+		\begin{tabular}{lllll}
+			\toprule
+			Feature & Icon & Description \\
+			\midrule
+			Bold & Fat B & Makes the font look fatter \\
+			Italicise & Italics I & Font leans to the right \\
+			Underline & U with a line beneath & Draws a line under the text \\
+			\bottomrule
+		\end{tabular}
+   \end{adjustbox}
+	\end{center}
+\end{table}
+
+\subsubsection{Links}
+Let's not forget about links. The links work, but they are displayed in the same
+style as other text.
 Here's a link to \href{https://booktype.pro/}{booktype.pro}. 
 Booktype allows authors to create beautiful books for print and digital
 distribution. Find out 
@@ -146,41 +174,19 @@ And here is an unorderly list
 \end{itemize}
 
 \begin{flushleft}
-Left aligned text. Lorem ipsum dolor sit amet, consetetur
-sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
-et dolore magna aliquamet.
+Left aligned text. \lipsum[1]
 \end{flushleft}
 
 \begin{flushright}
-Right aligned
-text. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-aliquyam erat, sed diam voluptua. At vero eos et etetur sadipscing
-elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
-magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
-justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-takimata sanctus est Lorem ipsum dolor sit amet.
+Right aligned text. \lipsum[1]
 \end{flushright}
 
-\begin{center}Center aligned
-text. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-aliquyam erat, sed diam voluptua. At vero eos et accusam e elitr,
-sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
-duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-sanctus est Lorem ipsum dolor sit amet.
+\begin{center}
+Center aligned text. \lipsum[1]
 \end{center}
 
 Justify /
-Blocksatz text. Lorem ipsum dolor sit amet, consetetur
-sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
-et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
-accu amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
-duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-sanctus est Lorem ipsum dolor sit amet.
+Blocksatz text. \lipsum[1]
 
 \subsection{Indentation, image and preformatted text}
 
@@ -209,18 +215,10 @@ And then the text continues here.
  
 \chapter{Style "Heading" with a lot of text, a lot of text, a lot of
 text, and even more text}
-Paragraph style "Normal Text" Lorem ipsum dolor sit amet,
-consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-ut labore et dolore magna aliquyam erat, sed diam voluptua.
+Paragraph style "Normal Text" \lipsum[1]
 \section{Style "Subheading" with a lot of text, a lot of text, a
 lot of text, and even more text}
-At vero eos et accusam et justo duo dolores et ea rebum. Stet
-clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
-sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
-elitr,
+\lipsum[1]
 \subsection{Style "SubSubheading" with a lot of text, a lot of text, a
 lot of text, and even more text}
-Sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
-duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-sanctus est Lorem ipsum dolor sit amet.
+\lipsum[1]

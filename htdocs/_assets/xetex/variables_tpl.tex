@@ -1,0 +1,92 @@
+% this document sets all the variables used for metadata in this book
+
+% GENERAL SETTINGS
+\newcommand{\varBookLanguage}       {varBookLanguage}
+% english, german
+\newcommand{\varBookTheme}          {varBookTheme}
+% available themes:
+% default, bauhaus, victoriannovel, gothicflower
+
+% FRONT MATTER
+\newcommand{\varShowHalfTitle}      {varShowHalfTitle} % (true|false)
+\newcommand{\varShowTitlePage}      {varShowTitlePage} % (true|false)
+\newcommand{\varShowColophon}       {varShowColophon} % (true|false)
+\newcommand{\varShowDedication}     {varShowDedication} % (true|false)
+\newcommand{\varShowToContents}     {varShowToContents} % (true|false)
+\newcommand{\varShowToFigures}      {varShowToFigures} % (true|false) opt. overwritten by variables-theme.tex
+\newcommand{\varShowToTables}       {varShowToTables} % (true|false) opt. overwritten by variables-theme.tex
+
+% PAPER FORMAT AND MARGINS
+% use cm, mm or in (for inch). for more info:
+% https://en.wikibooks.org/wiki/LaTeX/Lengths
+\newcommand{\varPaperWidth}         {varPaperWidth} 
+\newcommand{\varPaperHeight}        {varPaperHeight} 
+\newcommand{\varBindingOffset}      {varBindingOffset} 
+\newcommand{\varMarginTop}          {varMarginTop} % measurement excluding header!
+\newcommand{\varMarginBottom}       {varMarginBottom}
+\newcommand{\varMarginLeft}         {varMarginLeft}
+\newcommand{\varMarginRight}        {varMarginRight}
+
+% METADATA
+% the collophon will print all filled in information
+% if you want to hide something, leave it empty like this: {}
+% IMPORTANT: all variables here must be initiated, do not comment them out
+\newcommand{\varTitle}            {varTitle}
+\newcommand{\varSubtitle}         {varSubtitle}
+\newcommand{\varAuthors}          {varAuthors}
+\newcommand{\varURLAuthor}        {varURLAuthor}
+\newcommand{\varDedication}       {varDedication}
+\newcommand{\varShorttitle}       {varShorttitle}
+\newcommand{\varCopyrightdate}    {varCopyrightdate}
+\newcommand{\varCopyrightholder}  {varCopyrightholder}
+
+\newcommand{\varPublicationdate}   {varPublicationdate}
+\newcommand{\varPublisher}         {varPublisher}
+\newcommand{\varPublishercity}     {varPublishercity}
+\newcommand{\varURLPublisher}      {varURLPublisher}
+
+\newcommand{\varCoverdesign}			{varCoverdesign}
+\newcommand{\varCoverimage}				{varCoverimage}
+\newcommand{\varPhotographyby}		{varPhotographyby}
+
+\newcommand{\varShortdescription} {varShortdescription}
+\newcommand{\varLongdescription}  {varLongdescription}
+\newcommand{\varEbookISBN}        {varEbookISBN}
+\newcommand{\varPrintISBN}        {varPrintISBN}
+\newcommand{\varEditedby}         {varEditedby}
+\newcommand{\varTextby}           {varTextby}
+\newcommand{\varTranslationby}    {varTranslationby}
+\newcommand{\varIntroductionby}   {varIntroductionby}
+\newcommand{\varIllustrationby}   {varIllustrationby}
+\newcommand{\varResearch}         {varResearch}
+\newcommand{\varLectorate}        {varLectorate}
+\newcommand{\varProofreading}     {varProofreading}
+\newcommand{\varRightsclearing}   {varRightsclearing}
+\newcommand{\varTypeface}         {varTypeface}
+
+\newcommand{\varPrintercompany}     {varPrintercompany}
+\newcommand{\varPrintercountry}     {varPrintercountry}
+\newcommand{\varPrintedon}          {varPrintedon}
+\newcommand{\varPapercertification} {varPapercertification}
+\newcommand{\varBookbinder}         {varBookbinder}
+\newcommand{\varAcknowledge}        {varAcknowledge}
+\newcommand{\varEdition}                  {varEdition}
+\newcommand{\varBibliographicinformation} {varBibliographicinformation}
+\newcommand{\varCreationTool}             {varCreationTool}
+
+% FIGURES (images)
+% set some variables, not to be used, but to reset with \renewcommand without errors
+% variables can be assigned for each image
+% NOTE: the below values are not default for images.
+% If \recommand in LaTeX the value will change as of then for the rest of the text
+\newcommand{\varWrapText}     {false} % (true|false) wrap text around image?
+\newcommand{\varFigWidth}     {scale} % (text|paper|scale|0.x) 
+% 0.x like 0.5 = half text width
+% scale = max width is text
+% text = force width of text
+% paper = force width of paper
+\newcommand{\varFigFloat}     {l} % (r|R|l|L|i|I|o|O) only if \varWrapText http://ctan.org/pkg/wrapfig
+\newcommand{\varCaption}      {} % Caption. \renewcommand each image in text
+\newcommand{\varImgPath}      {} % Path To Image. \renewcommand each image in text
+% global for document (i.e. don't change inside text)
+\newcommand{\varFigPlacement} {hpb} % leave unchanged if you don't know what you do

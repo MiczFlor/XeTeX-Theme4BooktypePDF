@@ -1,0 +1,135 @@
+{
+  "CreateSpaceUS__5_x_8_inch": {
+    "width": "5in",
+    "height": "8in",
+    "binding": "0.76cm",
+    "margintop": "1.93cm",
+    "marginbottom": "1.93cm",
+    "marginleft": "1.52cm",
+    "marginright": "1.52cm"
+  },
+  "CreateSpaceUS__5.06_x_7.81_inch": {
+    "width": "5.06in",
+    "height": "7.81in",
+    "binding": "0.76cm",
+    "margintop": "1.93cm",
+    "marginbottom": "1.93cm",
+    "marginleft": "1.52cm",
+    "marginright": "1.52cm"
+  },
+  "CreateSpaceUS__5.25_x_8_inch": {
+    "width": "5.25in",
+    "height": "8in",
+    "binding": "0.76cm",
+    "margintop": "1.93cm",
+    "marginbottom": "1.93cm",
+    "marginleft": "1.52cm",
+    "marginright": "1.52cm"
+  },
+  "CreateSpaceUS__5.5_x_8.5_inch": {
+    "name": "Digest",
+    "width": "5.5in",
+    "height": "8.5in",
+    "binding": "0.76cm",
+    "margintop": "1.93cm",
+    "marginbottom": "1.93cm",
+    "marginleft": "1.52cm",
+    "marginright": "1.52cm"
+  },
+  "CreateSpaceUS__6_x_9_inch": {
+    "name": "Standard Novel",
+    "width": "6in",
+    "height": "9in",
+    "binding": "0.76cm",
+    "margintop": "1.93cm",
+    "marginbottom": "1.93cm",
+    "marginleft": "1.52cm",
+    "marginright": "1.52cm"
+  },
+  "CreateSpaceUS__6.14_x_9.21_inch": {
+    "name": "Royal",
+    "width": "6.14in",
+    "height": "9.21in",
+    "binding": "0.76cm",
+    "margintop": "1.93cm",
+    "marginbottom": "1.93cm",
+    "marginleft": "1.52cm",
+    "marginright": "1.52cm"
+  },
+  "CreateSpaceUS__6.69_x_9.61_inch": {
+    "width": "6.69in",
+    "height": "9.61in",
+    "binding": "0.76cm",
+    "margintop": "1.93cm",
+    "marginbottom": "1.93cm",
+    "marginleft": "1.52cm",
+    "marginright": "1.52cm"
+  },
+  "CreateSpaceUS__7_x_10_inch": {
+    "name": "Text Book",
+    "width": "7in",
+    "height": "10in",
+    "binding": "0.76cm",
+    "margintop": "1.93cm",
+    "marginbottom": "1.93cm",
+    "marginleft": "1.52cm",
+    "marginright": "1.52cm"
+  },
+  "CreateSpaceUS__7.44_x_9.69_inch": {
+    "name": "Crown Quarto",
+    "width": "7.44in",
+    "height": "9.69in",
+    "binding": "0.76cm",
+    "margintop": "1.93cm",
+    "marginbottom": "1.93cm",
+    "marginleft": "1.52cm",
+    "marginright": "1.52cm"
+  },
+  "CreateSpaceUS__7.5_x_9.25_inch": {
+    "width": "7.5in",
+    "height": "9.25in",
+    "binding": "0.76cm",
+    "margintop": "1.93cm",
+    "marginbottom": "1.93cm",
+    "marginleft": "1.52cm",
+    "marginright": "1.52cm"
+  },
+  "CreateSpaceUS__8_x_10_inch": {
+    "width": "8in",
+    "height": "10in",
+    "binding": "0.76cm",
+    "margintop": "1.93cm",
+    "marginbottom": "1.93cm",
+    "marginleft": "1.52cm",
+    "marginright": "1.52cm"
+  },
+  "CreateSpaceUS__8.25_x_6_inch": {
+    "width": "8.25in",
+    "height": "6in",
+    "binding": "0.76cm",
+    "margintop": "1.93cm",
+    "marginbottom": "1.93cm",
+    "marginleft": "1.52cm",
+    "marginright": "1.52cm"
+  },
+  "CreateSpaceUS__8.5_x_8.5_inch": {
+    "width": "8.5in",
+    "height": "8.5in",
+    "binding": "0.76cm",
+    "margintop": "1.93cm",
+    "marginbottom": "1.93cm",
+    "marginleft": "1.52cm",
+    "marginright": "1.52cm"
+  },
+  "CreateSpaceUS__8.5_x_11_inch": {
+    "name": "US Letter",
+    "width": "8.5in",
+    "height": "11in",
+    "binding": "0.76cm",
+    "margintop": "1.93cm",
+    "marginbottom": "1.93cm",
+    "marginleft": "1.52cm",
+    "marginright": "1.52cm"
+  }
+}
+        
