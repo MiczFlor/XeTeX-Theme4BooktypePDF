@@ -105,6 +105,15 @@ function get_post_values() {
       $return['var']['varMarginBottom'] = $pagepresets[$_POST[$key]]['marginbottom'];
       $return['var']['varMarginLeft'] = $pagepresets[$_POST[$key]]['marginleft'];
       $return['var']['varMarginRight'] = $pagepresets[$_POST[$key]]['marginright'];
+      // see if we have crop values, of not, leave empty
+      $return['var']['varCropPaperWidth'] = $pagepresets[$_POST[$key]]['width'];
+      $return['var']['varCropPaperHeight'] = $pagepresets[$_POST[$key]]['height'];
+      if(isset($pagepresets[$_POST[$key]]['cropwidth'])) {
+        $return['var']['varCropPaperWidth'] = $pagepresets[$_POST[$key]]['cropwidth'];
+      }
+      if(isset($pagepresets[$_POST[$key]]['cropheight'])) {
+        $return['var']['varCropPaperHeight'] = $pagepresets[$_POST[$key]]['cropheight'];
+      }
     }
   }
   return $return;
@@ -280,7 +289,7 @@ print "
 */ 
 function fill_default_values() {
   $formvals = array(
-  "varBookLanguage" => "english", // english, german
+  "varBookLanguage" => "german", // english, german
   "varBookTheme" => "default", // available themes: default, bauhaus, victoriannovel, gothicflower
   // FRONT MATTER
   "varShowHalfTitle" => "true", // (true|false)

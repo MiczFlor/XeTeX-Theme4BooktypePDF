@@ -1,6 +1,6 @@
 <?php
 $formvals = array(
-  "varBookLanguage" => "english", // english, german
+  "varBookLanguage" => "german", // english, german
   "varBookTheme" => "default", // available themes: default, bauhaus, victoriannovel, gothicflower
   // FRONT MATTER
   "varShowHalfTitle" => "true", // (true|false)
@@ -24,7 +24,7 @@ $formvals = array(
   // the collophon will print all filled in information
   // if you want to hide something, leave it empty like this: ""
   // IMPORTANT: all variables here must be initiated, do not comment them out
-  "varTitle" => "Dracula meets Frankenstein}
+  "varTitle" => "Dracula meets Frankenstein",
   "varSubtitle" => "What happens when two worlds collide?",
   "varAuthors" => "Author van Book",
   "varURLAuthor" => "www.authorwebsite.com",

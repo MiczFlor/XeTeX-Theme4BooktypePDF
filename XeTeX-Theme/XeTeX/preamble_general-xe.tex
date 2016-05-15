@@ -17,6 +17,21 @@
 	right				= \varMarginRight,
 ]{geometry}
 
+% crop marks only if the variables have values and are not emtpy
+% http://ctan.org/pkg/crop
+% using cam crop marks, because these are invisible if no crop marks are used, when:
+% \varCropPaperWidth = \varPaperWidth and \varCropPaperHeight = \varPaperHeight
+\usepackage[
+  % set width and height to a4 width and height + 6mm
+  width=\varCropPaperWidth, height=\varCropPaperHeight,
+  % use any combination of these options to add different cut markings
+  cam, noinfo,
+  % set the type of TeX renderer you use
+  pdflatex,
+  % center the contents
+  center
+]{crop}
+
 % investigate further for improved layout options:
 % http://ftp.snt.utwente.nl/pub/software/tex/macros/latex/contrib/layouts/
 % \usepackage{layouts}

@@ -1,4 +1,105 @@
 {
+  "bodde__120_x_190_mm": {
+    "width": "120mm",
+    "height": "190mm",
+    "binding": "0.76cm",
+    "margintop": "1.25cm",
+    "marginbottom": "2cm",
+    "marginleft": "1.5cm",
+    "marginright": "1.5cm",
+    "cropwidth": "130mm",
+    "cropheight": "200mm"
+  },
+  "bodde__135_x_215_mm": {
+    "width": "135mm",
+    "height": "215mm",
+    "binding": "0.76cm",
+    "margintop": "1.875cm",
+    "marginbottom": "2.8cm",
+    "marginleft": "1.75cm",
+    "marginright": "1.75cm"
+  },
+  "bodde__148_x_210_mm": {
+    "width": "148mm",
+    "height": "210mm",
+    "binding": "0.76cm",
+    "margintop": "1.875cm",
+    "marginbottom": "2.8cm",
+    "marginleft": "1.8cm",
+    "marginright": "1.8cm"
+  },
+  "bodde__155_x_220_mm": {
+    "width": "155mm",
+    "height": "220mm",
+    "binding": "0.76cm",
+    "margintop": "1.875cm",
+    "marginbottom": "2.8cm",
+    "marginleft": "1.8cm",
+    "marginright": "1.8cm"
+  },
+  "bodde__170_x_170_mm": {
+    "width": "170mm",
+    "height": "170mm",
+    "binding": "0.76cm",
+    "margintop": "1.3cm",
+    "marginbottom": "2.4cm",
+    "marginleft": "1.8cm",
+    "marginright": "1.8cm"
+  },
+  "bodde__170_x_170_mm": {
+    "width": "170mm",
+    "height": "170mm",
+    "binding": "0.76cm",
+    "margintop": "1.3cm",
+    "marginbottom": "2.4cm",
+    "marginleft": "1.8cm",
+    "marginright": "1.8cm"
+  },
+  "bodde__170_x_220_mm": {
+    "width": "170mm",
+    "height": "220mm",
+    "binding": "0.76cm",
+    "margintop": "1.875cm",
+    "marginbottom": "2.8cm",
+    "marginleft": "1.8cm",
+    "marginright": "1.8cm"
+  },
+  "bodde__190_x_270_mm": {
+    "width": "190mm",
+    "height": "270mm",
+    "binding": "0.76cm",
+    "margintop": "1.8cm",
+    "marginbottom": "2.8cm",
+    "marginleft": "2.15cm",
+    "marginright": "2.15cm"
+  },
+  "bodde__210_x_150_mm": {
+    "width": "210mm",
+    "height": "150mm",
+    "binding": "0.76cm",
+    "margintop": "1.4cm",
+    "marginbottom": "2.3cm",
+    "marginleft": "2.15cm",
+    "marginright": "2.15cm"
+  },
+  "bodde__210_x_210_mm": {
+    "width": "210mm",
+    "height": "210mm",
+    "binding": "0.76cm",
+    "margintop": "1.6cm",
+    "marginbottom": "2.6cm",
+    "marginleft": "2cm",
+    "marginright": "2cm"
+  },
+  "bodde__210_x_297_mm": {
+    "width": "210mm",
+    "height": "297mm",
+    "binding": "0.76cm",
+    "margintop": "1.8cm",
+    "marginbottom": "2.8cm",
+    "marginleft": "2.15cm",
+    "marginright": "2.15cm"
+  },
   "CreateSpaceUS__5_x_8_inch": {
     "width": "5in",
     "height": "8in",
