@@ -288,7 +288,7 @@ function fill_default_values() {
   "varShowColophon" => "true", // (true|false)
   "varShowDedication" => "true", // (true|false)
   "varShowToContents" => "true", // (true|false)
-  "varShowToFigures" => "true", // (true|false) opt. overwritten by variables-theme.tex
+  "varShowToFigures" => "false", // (true|false) opt. overwritten by variables-theme.tex
   "varShowToTables" => "false", // (true|false) opt. overwritten by variables-theme.tex
   // PAPER FORMAT AND MARGINS
   // use cm, mm or in (for inch). for more info:

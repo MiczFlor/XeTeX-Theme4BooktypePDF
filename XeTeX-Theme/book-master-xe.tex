@@ -1,3 +1,13 @@
+% !TEX TS-program = xelatex
+% !TEX encoding =UTF-8 Unicode
+
+% This set of XeTeX book templates is aimed at making automated Booktype PDFs easier. 
+% All variables regarding metadata, paper size, themes are saved in one seperate .tex
+% file. The master XeTeX template will read this file and change the book accordingly
+% (e.g. build a colophon based on available metadata). 
+% More about Booktype at https://booktype.pro
+% https://github.com/MiczFlor/XeTeX-Theme4BooktypePDF
+
 % load the variables / metadata for the book first
 \input{BookConfig/variables.tex}
 
@@ -9,7 +19,6 @@
 \input{XeTeX/themes/\varBookTheme/preamble_theme.tex}
 
 \begin{document}
-
 %-------------------------------------------------------------------------------
 % FRONTMATTER
 \frontmatter
@@ -98,7 +107,7 @@
 \fi
 
 % INTRODUCTION (one or more chapters)
-% all BACKMATTER content:
+% all FRONTMATTER content:
 \input{_content/AAfrontmatter.tex}
 
 %-------------------------------------------------------------------------------
@@ -125,13 +134,6 @@
 	\fi
 %-------------------------------------------------------------------------------
 % STRUCTURING OF CONTENT
-%\part{D R A C U L A} == section in Booktype, this is a stand alone page on the right (odd number)
-%\chapter{Jonathan Harker's Journal} == chapter in Booktype, page starts on the right (odd number)
-%\section{Section title}
-%\subsection{''subsection''}
-%\subsubsection{''subsubsection''}
-%\paragraph{''paragraph''}
-%\subparagraph{''subparagraph''}
 
 % all possible pagestyles (header and footer) are included in the following file
 % https://en.wikibooks.org/wiki/LaTeX/Page_Layout#Page_styles
@@ -147,5 +149,6 @@
 %-------------------------------------------------------------------------------
 % all BACKMATTER content:
 \input{_content/AAbackmatter.tex}
+\input{_content/AAbackmatterlayout.tex}
 
 \end{document}

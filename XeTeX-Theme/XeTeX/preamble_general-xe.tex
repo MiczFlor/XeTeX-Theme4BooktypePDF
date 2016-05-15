@@ -17,6 +17,12 @@
 	right				= \varMarginRight,
 ]{geometry}
 
+% investigate further for improved layout options:
+% http://ftp.snt.utwente.nl/pub/software/tex/macros/latex/contrib/layouts/
+% \usepackage{layouts}
+% https://www.ctan.org/pkg/layout
+\usepackage{layout}
+
 % here are packages needed to work with XeTeX
 \usepackage{xltxtra} % Extra customizations for XeLaTeX;
 % xltxtra automatically loads fontspec and xunicode, both of which you need
@@ -24,10 +30,18 @@
 % change the names of the fonts to the ones you want to use!
 %\defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
 % fonts are set in the preamble of the theme
+\usepackage{xunicode}
 
 % line spacing
 % http://www.ctan.org/tex-archive/macros/latex/contrib/setspace/
 \usepackage{setspace}
+
+% microtype – Subliminal refinements towards typographical perfection
+% Problem: small page sizes make justified text look ragged.
+% http://tex.stackexchange.com/questions/100296/how-to-get-xelatex-do-proper-hyphenation-and-full-justification
+\usepackage{microtype} 
+\hyphenpenalty=1000 % default 50
+\tolerance=500      % default 200
 
 %  alternative commands for left justified text, right-justified text and centred text that support hyphenation
 \usepackage{ragged2e}
@@ -44,6 +58,7 @@
 
 % ty­po­graph­i­cal (and other) rules, and hy­phen­ation pat­terns for a wide range of lan­guages
 \usepackage{polyglossia}
+%\setdefaultlanguage{\varBookLanguage}
 \setdefaultlanguage{\varBookLanguage}
 
 % changes to the standard chapter style
