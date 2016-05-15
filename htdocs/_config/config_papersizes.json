@@ -17,7 +17,9 @@
     "margintop": "1.875cm",
     "marginbottom": "2.8cm",
     "marginleft": "1.75cm",
-    "marginright": "1.75cm"
+    "marginright": "1.75cm",
+    "cropwidth": "145mm",
+    "cropheight": "225mm"
   },
   "bodde__148_x_210_mm": {
     "width": "148mm",
@@ -26,7 +28,9 @@
     "margintop": "1.875cm",
     "marginbottom": "2.8cm",
     "marginleft": "1.8cm",
-    "marginright": "1.8cm"
+    "marginright": "1.8cm",
+    "cropwidth": "158mm",
+    "cropheight": "220mm"
   },
   "bodde__155_x_220_mm": {
     "width": "155mm",
@@ -35,7 +39,9 @@
     "margintop": "1.875cm",
     "marginbottom": "2.8cm",
     "marginleft": "1.8cm",
-    "marginright": "1.8cm"
+    "marginright": "1.8cm",
+    "cropwidth": "165mm",
+    "cropheight": "230mm"
   },
   "bodde__170_x_170_mm": {
     "width": "170mm",
@@ -44,16 +50,9 @@
     "margintop": "1.3cm",
     "marginbottom": "2.4cm",
     "marginleft": "1.8cm",
-    "marginright": "1.8cm"
-  },
-  "bodde__170_x_170_mm": {
-    "width": "170mm",
-    "height": "170mm",
-    "binding": "0.76cm",
-    "margintop": "1.3cm",
-    "marginbottom": "2.4cm",
-    "marginleft": "1.8cm",
-    "marginright": "1.8cm"
+    "marginright": "1.8cm",
+    "cropwidth": "180mm",
+    "cropheight": "180mm"
   },
   "bodde__170_x_220_mm": {
     "width": "170mm",
@@ -62,7 +61,9 @@
     "margintop": "1.875cm",
     "marginbottom": "2.8cm",
     "marginleft": "1.8cm",
-    "marginright": "1.8cm"
+    "marginright": "1.8cm",
+    "cropwidth": "180mm",
+    "cropheight": "230mm"
   },
   "bodde__190_x_270_mm": {
     "width": "190mm",
@@ -71,7 +72,9 @@
     "margintop": "1.8cm",
     "marginbottom": "2.8cm",
     "marginleft": "2.15cm",
-    "marginright": "2.15cm"
+    "marginright": "2.15cm",
+    "cropwidth": "200mm",
+    "cropheight": "280mm"
   },
   "bodde__210_x_150_mm": {
     "width": "210mm",
@@ -80,7 +83,9 @@
     "margintop": "1.4cm",
     "marginbottom": "2.3cm",
     "marginleft": "2.15cm",
-    "marginright": "2.15cm"
+    "marginright": "2.15cm",
+    "cropwidth": "220mm",
+    "cropheight": "160mm"
   },
   "bodde__210_x_210_mm": {
     "width": "210mm",
@@ -89,7 +94,9 @@
     "margintop": "1.6cm",
     "marginbottom": "2.6cm",
     "marginleft": "2cm",
-    "marginright": "2cm"
+    "marginright": "2cm",
+    "cropwidth": "220mm",
+    "cropheight": "220mm"
   },
   "bodde__210_x_297_mm": {
     "width": "210mm",
@@ -98,7 +105,9 @@
     "margintop": "1.8cm",
     "marginbottom": "2.8cm",
     "marginleft": "2.15cm",
-    "marginright": "2.15cm"
+    "marginright": "2.15cm",
+    "cropwidth": "220mm",
+    "cropheight": "307mm"
   },
   "CreateSpaceUS__5_x_8_inch": {
     "width": "5in",
